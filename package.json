@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "keystone build && next build"
+    "build": "keystone-next build && node thing.js && next build"
   },
   "dependencies": {
     "@keystone-next/admin-ui": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/admin-ui",
