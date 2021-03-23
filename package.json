@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "keystone-next build && node thing.js && next build"
+    "build": "keystone-next build && next build"
   },
   "dependencies": {
-    "@keystone-next/admin-ui": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/admin-ui",
-    "@keystone-next/fields": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/fields",
-    "@keystone-next/keystone": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/keystone",
+    "@keystone-next/admin-ui": "https://pkg.csb.dev/keystonejs/keystone/commit/536b021e/@keystone-next/admin-ui",
+    "@keystone-next/fields": "https://pkg.csb.dev/keystonejs/keystone/commit/536b021e/@keystone-next/fields",
+    "@keystone-next/keystone": "https://pkg.csb.dev/keystonejs/keystone/commit/536b021e/@keystone-next/keystone",
     "next": "^10.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
