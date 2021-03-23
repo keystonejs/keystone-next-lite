@@ -1,0 +1,29 @@
+{
+  "name": "@keystone-next/example-next-lite",
+  "version": "1.0.3",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "keystone build && next build"
+  },
+  "dependencies": {
+    "@keystone-next/admin-ui": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/admin-ui",
+    "@keystone-next/fields": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/fields",
+    "@keystone-next/keystone": "https://pkg.csb.dev/keystonejs/keystone/commit/3437022b/@keystone-next/keystone",
+    "next": "^10.0.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "prisma": {
+    "schema": ".keystone/prisma/schema.prisma"
+  },
+  "repository": "https://github.com/keystonejs/keystone/tree/master/examples-next/next-lite"
+}
