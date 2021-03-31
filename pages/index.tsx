@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
-import { lists } from '.keystone/api';
+import { InferGetStaticPropsType } from "next";
+import Link from "next/link";
+import { lists } from ".keystone/api";
 
-export default function HomePage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function HomePage({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
       <h1>Welcome to my blog</h1>
