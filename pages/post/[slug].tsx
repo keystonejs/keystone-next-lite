@@ -19,12 +19,7 @@ export default function PostPage({
     <div>
       <h1>{title}</h1>
       <div>
-        {hero}
-        {/* <Image
-          src={`/images/${post.hero.id}.${post.hero.extension}`}
-          width={post.hero.width}
-          height={post.hero.height}
-        /> */}
+        <Image src={hero.src} width={hero.width} height={hero.height} />
       </div>
       <div>{content}</div>
     </div>
@@ -54,8 +49,7 @@ export async function getStaticProps({
     resolveFields: `title
     content
     hero {
-      id
-      extension
+      src
       width
       height
     }`,

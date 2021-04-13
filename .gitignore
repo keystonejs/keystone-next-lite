@@ -2,3 +2,5 @@ node_modules/
 .next
 .keystone/admin
 .keystone/prisma/generated-client
+
+*.DS_Store
