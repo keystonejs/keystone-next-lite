@@ -5,6 +5,7 @@ import {
   InferGetStaticPropsType,
 } from "next";
 import Image from "next/image";
+import { DocumentRenderer } from "@keystone-next/document-renderer";
 
 import { lists } from ".keystone/api";
 
@@ -21,7 +22,9 @@ export default function PostPage({
       <div>
         <Image src={hero.src} width={hero.width} height={hero.height} />
       </div>
-      <div>{content}</div>
+      <div>
+        <DocumentRenderer document={(content as any).document} />
+      </div>
     </div>
   );
 }
@@ -46,13 +49,17 @@ export async function getStaticProps({
 }: GetStaticPropsContext) {
   const [post] = await lists.Post.findMany({
     where: { slug: slug as string },
-    resolveFields: `title
-    content
-    hero {
-      src
-      width
-      height
-    }`,
+    resolveFields: `
+      title
+      content {
+        document
+      }
+      hero {
+        src
+        width
+        height
+      }
+    `,
   });
   return { props: { post } };
 }

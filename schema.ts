@@ -6,7 +6,10 @@ export const Post = list({
   fields: {
     title: text({ isRequired: true }),
     slug: text(),
-    content: document(),
+    content: document({
+      formatting: true,
+      links: true,
+    }),
     hero: image(),
   },
 });
