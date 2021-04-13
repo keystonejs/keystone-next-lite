@@ -13,4 +13,5 @@ model Post {
   title   String?
   slug    String?
   content String?
+  hero    String?
 }

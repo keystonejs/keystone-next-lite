@@ -9,4 +9,7 @@ export default config({
     generateNodeAPI: true,
   },
   lists: { Post },
+  images: {
+    upload: "local",
+  },
 });
