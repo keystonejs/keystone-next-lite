@@ -10,12 +10,8 @@ import { DocumentRenderer } from "@keystone-next/document-renderer";
 import { lists } from ".keystone/api";
 
 export default function PostPage({
-  post,
+  post: { title, content, hero },
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { title, content, hero } = post;
-
-  console.log(hero);
-
   return (
     <div>
       <h1>{title}</h1>
@@ -31,7 +27,7 @@ export default function PostPage({
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   const posts = await lists.Post.findMany({
-    resolveFields: false,
+    resolveFields: "slug",
   });
 
   const paths = posts
