@@ -37,7 +37,7 @@ export async function getStaticProps({
   params: { slug },
 }: GetStaticPropsContext) {
   const [post] = await lists.Post.findMany({
-    where: { slug: slug as string },
+    where: { slug: params!.slug as string },
     resolveFields: false,
   });
   return { props: { post } };
