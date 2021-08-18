@@ -33,11 +33,9 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   };
 }
 
-export async function getStaticProps({
-  params,
-}: GetStaticPropsContext) {
+export async function getStaticProps({ params }: GetStaticPropsContext) {
   const [post] = await lists.Post.findMany({
-    where: { slug: params!.slug as string },
+    where: { slug: { equals: params!.slug as string } },
     resolveFields: false,
   });
   return { props: { post } };
